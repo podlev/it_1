@@ -7,10 +7,13 @@ def task():
     #------- пишите код здесь -----
     r.sleep=0
     r.rt()
-    for z in range (1,29):
-        r.pt()
-        r.rt()
-        print(z)
+    for stroka in range (1,13):
+        for stolbec in range (1,28):
+            r.pt()
+            r.rt()
+        r.dn()
+        r.lt(27)
+            
     
     #------- пишите код здесь -----
 r.start(task)
