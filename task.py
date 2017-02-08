@@ -1,31 +1,17 @@
 #-*- coding: utf-8 -*
 import robot
 r = robot.rmap()
-r.lm('task3-9')
+r.lm('task4-1')
 def task():
     pass
     #------- пишите код здесь -----
-    r.up()
-    if r.cl():
-        r.dn()
-        r.lt()
-        if r.cl():
-            r.rt()
-            r.dn()
-            if r.cl():
-                r.up()
-                r.rt()
-                if r.cl():
-                    r.lt()
-                    r.pt()
-                else:
-                    r.lt()
-            else:
-                r.up()
-        else:
-            r.rt()
-    else:
-        r.dn()   
+    r.sleep=0
+    r.rt()
+    for z in range (1,29):
+        r.pt()
+        r.rt()
+        print(z)
+    
     #------- пишите код здесь -----
 r.start(task)
 
