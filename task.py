@@ -1,15 +1,16 @@
 #-*- coding: utf-8 -*
 import robot
 r = robot.rmap()
-r.lm('task4-1')
+r.lm('task4-7')
 def task():
     pass
     #------- пишите код здесь -----
     r.sleep=0
     r.rt()
     for stroka in range (1,13):
+        color=r.randcolor()
         for stolbec in range (1,28):
-            r.pt()
+            r.paint(color)
             r.rt()
         r.dn()
         r.lt(27)
