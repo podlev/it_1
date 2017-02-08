@@ -1,21 +1,23 @@
 #-*- coding: utf-8 -*
 import robot
 r = robot.rmap()
-r.lm('task4-7')
+r.lm('task4-11')
 def task():
     pass
     #------- пишите код здесь -----
-    r.sleep=0
+    def S(a,b):
+        for stroka in range (1,a+1):
+            for stolbec in range (1,b+1):
+                r.pt()
+                r.rt()
+            r.dn()
+            r.lt(b)
     r.rt()
-    for stroka in range (1,13):
-        color=r.randcolor()
-        for stolbec in range (1,28):
-            r.paint(color)
-            r.rt()
-        r.dn()
-        r.lt(27)
-            
-    
+    r.dn()
+    S(3,6)
+    r.rt(8)
+    r.up(3)
+    S(4,9)
     #------- пишите код здесь -----
 r.start(task)
 
